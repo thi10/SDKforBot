@@ -15,7 +15,7 @@ var w_conversation = watson.conversation({
     version: 'v1',
     version_date: '2016-07-11'
 });
-var workspace = process.env.WORKSPACE_ID || 'workspaceId';
+var workspace = process.env.WORKSPACE_ID || 'LHC';
 
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'tokenDeVerificacaoFacebook') {
@@ -102,7 +102,7 @@ function sendMessage(sender, text_) {
     });
 };
 
-var token = "tokenFB";
+var token = "EAASKGY1Ch4MBAEwSMwXd9uSaanh9kOv5kmoEP0Yg5I9Rl2YZCFry4q4BzZBIYsfPotcJGpCNwMzNCm036RVZBRyUMC7L3aQ15LVhId3QbNCGCix2wX60Kl9gtBu1KucwHTrIgDa5KoZCZAlb3MqZA58XpXWXSujchGLSeZASBV7OAZDZD";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 app.listen(port, host);
